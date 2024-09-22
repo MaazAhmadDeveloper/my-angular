@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Student</h1>
+  <div class="row">
+    <div class="col">
+      <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)" >
+        <input type="text" ngModel name="username" />
+        <br><br>
+        <input type="email" ngModel name="email" />
+        <br><br>
+        <input type="password" ngModel name="password" />
+        <br><br>
+        <button type="submit"> Submit </button>
+      </form>
+    </div>
+
+    <br>
+    <button (click)="showFlaOpt()" >Show Student</button>
+    <br>
+    <br>
+
+    <div *ngIf="showFlag then ifBlock"></div>
+    <ng-template #ifBlock>
+        <ul>
+            <li> {{student?.username}} </li>
+            <li> {{student?.email}} </li>
+            <li> {{student?.password}} </li>
+        </ul>
+    </ng-template>
+
+  </div>
+</div>
+
+<div class="demo-section">
+    Button with a badge on the left
+    <button mat-raised-button matBadge="8" matBadgePosition="before">
+      Action
+    </button>
+  </div>

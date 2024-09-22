@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <main class="main-todo-box">
+                <h1>Todo List</h1>
+                <form (submit)="onSubmit(todoInput)" class="get-todo">
+                    <input #todoInput class="todo-input form-control" ngModel type="text" autocomplete="off" name="todo" >
+                    <button class="add btn btn-info" >Add</button>
+                </form>
+                <span class="todo-error-message"> {{ emptyInputError }}  </span>
+                <div class="all-todo-list">
+                    <ul>
+                        <li *ngFor="let item of allTodos"> 
+                            <input  class="form-check-input" type="checkbox" (change)="todoCheck(item.id)" [checked]="item.isCheck"  name="checkbox">
+                            <p class="todo-text todo-check-text-{{item.isCheck}}"> {{ item.value }}</p>
+                            <button class="btn btn-danger btn-sm" (click)="todoDelete(item.id)" >Delete</button>    
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

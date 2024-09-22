@@ -1,0 +1,10 @@
+<button (click)="changeItem()" class="btn btn-warning">Click to change in Clid</button>
+
+<h1>
+    <b>Child: </b>
+    {{item}}
+</h1>
+
+<input type="text" placeholder="Data to parent" #movieChild>
+
+<button class="btn-info" (click)="updateDataInChild.emit(movieChild.value)" >Update Data</button>

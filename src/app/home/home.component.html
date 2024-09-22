@@ -1,1 +1,66 @@
 <h1>hi</h1>
+<h1 class="{{data}}"> {{ data == "hello" }} </h1>
+
+<div class="caontainer">
+    <div class="row">
+        <div class="col">
+            <button (click)="func('Click', 'null')" (click)="getDisplayValue(first.value)" class="btn btn-warning">
+                Click me
+            </button>
+            <button (mousemove)="func('Mouse over', 'null')" class="btn btn-warning">
+                Click me
+            </button>
+            <button (mouseleave)="func('Mouse leave', 'null')" class="btn btn-warning">
+                Click me
+            </button>
+            <input type="text" #first (keydown)="func('Button down', first.value)" >
+            <input type="text" #second (keyup)="func('Button Up', second.value)" >
+            <input type="text" #third (keypress)="func('key press', third.value)" >
+        </div>
+    </div>
+</div>
+
+<!-- <app-students></app-students> -->
+<h1>text value is : {{display}} </h1>
+
+<br><br><br>
+
+<input type="text" placeholder="User Name first" disabled="{{disable}}" > 
+<input type="text" placeholder="User Name second" [disabled]="disable" > 
+<br>
+<button (click)="disableFlag()" > Input Disable Flag</button>
+
+<br class="m-5">
+
+<h1>IF ELSE HERE</h1>
+
+<div class="container">
+    <div class="row" *ngIf="ifElseFlag then ifBlock else elseBlock" > </div>
+    <ng-template #ifBlock>
+        <h1>Hell here is if block</h1>
+    </ng-template>
+    
+    <ng-template #elseBlock>
+        <h1>Hell here is else block</h1>
+    </ng-template>
+    <button (click)="ifElseFlagOpt()" class=" btn btn-danger">
+        if Flag
+    </button>
+</div>
+
+<div class="m-5">
+    <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>looping here</h3>
+
+            <div class="user" *ngFor="let user of allUsers">
+                {{user.name}} ---- {{user.email}} ---- {{user.phone}}
+            </div>
+
+        </div>
+    </div>
+</div>

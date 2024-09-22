@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h1> <b>lowercase: </b> {{20 | usdToPkr : 283: 10}} </h1>
+            <p style="color: red;"> cuton pipe USD to PKR</p>
+            <hr>
+
+
+            <h1> <b>uppercase: </b> {{dataStr | uppercase}} </h1>
+            <h1> <b>lowercase: </b> {{dataStr | lowercase}} </h1>
+            <hr>
+            
+            <h1> <b>USD currency: </b> {{dataNum | currency: "USD":'symbol-narrow':'0.2-2'}} </h1>
+            <hr> 
+            
+            <h1> <b>titlecase :</b> {{dataStr | titlecase}} </h1>
+            <hr>
+
+            <h1> <b>slice (11:18) :</b>  {{myObject | json | slice:11:18}} </h1>
+            <hr>
+            
+            <h1> <b>percent :</b> {{dataNum | percent}} </h1>
+            <hr>
+            
+            <h1> <b>json :</b> {{myObject | json}} </h1>
+            <hr>
+            
+            <h1> <b>date (short) :</b> {{currentDate | date:'short'}} </h1>
+            <hr>
+
+        </div>
+    </div>
+</div>

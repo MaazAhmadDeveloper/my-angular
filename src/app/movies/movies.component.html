@@ -1,1 +1,29 @@
-<p>movies works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br />
+      <h3 style="color: red">{{ data }}</h3>
+      <hr />
+      <br />
+      <hr />
+      <br />
+      <hr />
+
+      <app-movie-child
+        [item]="movieData"
+        (updateDataInChild)="updateData($event)"
+      ></app-movie-child>
+      <br />
+      <br />
+
+      <hr />
+      <br />
+      <hr />
+      <br />
+      <hr />
+
+      <h1><b>Parent: </b> {{ movieData }}</h1>
+      <app-todo-list></app-todo-list>
+    </div>
+  </div>
+</div>

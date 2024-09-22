@@ -1,0 +1,44 @@
+.main-todo-box{
+    margin-top: 2rem;
+    text-align: center;
+}
+.get-todo{
+    display: flex;
+}
+.todo-input{
+    margin-left: auto;
+    width: 20em;
+}
+.add{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.all-todo-list{
+    margin-top: 20px;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: auto;
+    max-width: 23em;
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.todo-text{
+    display: inline-block;
+    margin: auto;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.todo-error-message{
+    position: relative;
+    top: 10px;
+    color: red;
+}
+
+.todo-check-text-true{
+    text-decoration: line-through;
+}
